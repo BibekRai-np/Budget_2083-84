@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>बजेट वक्तव्य २०८३/८४ | नेपाल सरकार</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&family=Yatra+One&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --crimson: #C41E3A;
+  --deep-red: #8B0000;
+  --gold: #D4AF37;
+  --gold-light: #F5D776;
+  --midnight: #0A0E1A;
+  --navy: #0D1B2A;
+  --slate: #1A2940;
+  --steel: #243B55;
+  --sky: #4A90D9;
+  --teal: #00B4D8;
+  --emerald: #2D9B6F;
+  --amber: #F4A62A;
+  --white: #FFFFFF;
+  --off-white: #F7F3EE;
+  --text-light: #E8E0D0;
+  --text-muted: #9AA5B4;
+  --border: rgba(212,175,55,0.25);
+  --glass: rgba(255,255,255,0.04);
+  --glass-border: rgba(255,255,255,0.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--midnight);
+  color: var(--text-light);
+  font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ──── NOISE OVERLAY ──── */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0; opacity: 0.4;
+}
+
+/* ──── SCROLLBAR ──── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--midnight); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+/* ──── HERO ──── */
+.hero {
+  position: relative; min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(196,30,58,0.35) 0%, transparent 70%),
+              radial-gradient(ellipse 60% 40% at 80% 80%, rgba(212,175,55,0.12) 0%, transparent 60%),
+              var(--midnight);
+}
+
+.hero-orb {
+  position: absolute; border-radius: 50%; filter: blur(80px); animation: pulse-orb 6s ease-in-out infinite;
+}
+.hero-orb-1 { width: 600px; height: 600px; top: -20%; left: -10%; background: radial-gradient(circle, rgba(196,30,58,0.3) 0%, transparent 70%); }
+.hero-orb-2 { width: 400px; height: 400px; bottom: -10%; right: -5%; background: radial-gradient(circle, rgba(212,175,55,0.2) 0%, transparent 70%); animation-delay: -3s; }
+
+@keyframes pulse-orb {
+  0%, 100% { transform: scale(1) translateY(0); opacity: 1; }
+  50% { transform: scale(1.1) translateY(-20px); opacity: 0.7; }
+}
+
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(212,175,55,0.06) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(212,175,55,0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+}
+
+.hero-content {
+  position: relative; z-index: 2; text-align: center; padding: 2rem;
+  animation: fadeInUp 1.2s ease both;
+}
+
+.hero-emblem {
+  width: 80px; height: 80px; margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, var(--gold), var(--crimson));
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 2.5rem; box-shadow: 0 0 40px rgba(212,175,55,0.4), 0 0 80px rgba(196,30,58,0.2);
+  animation: spin-slow 20s linear infinite;
+}
+
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+
+.hero-badge {
+  display: inline-block; background: linear-gradient(90deg, var(--crimson), var(--deep-red));
+  color: var(--gold-light); font-family: 'Poppins', sans-serif; font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase; padding: 0.4rem 1.2rem; border-radius: 50px;
+  margin-bottom: 1.5rem; border: 1px solid rgba(212,175,55,0.3);
+  box-shadow: 0 0 20px rgba(196,30,58,0.3);
+}
+
+.hero-title {
+  font-family: 'Eczar', serif; font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 800;
+  line-height: 1.15; color: var(--white);
+  text-shadow: 0 0 60px rgba(196,30,58,0.5);
+  margin-bottom: 0.5rem;
+}
+
+.hero-title span { color: var(--gold); }
+
+.hero-subtitle {
+  font-family: 'Yatra One', serif; font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  color: var(--gold-light); margin-bottom: 1rem; opacity: 0.9;
+}
+
+.hero-meta {
+  font-family: 'Poppins', sans-serif; font-size: 0.85rem; color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.hero-meta span { color: var(--gold); font-weight: 600; }
+
+.hero-scroll {
+  position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+  animation: bounce 2s ease-in-out infinite;
+}
+.hero-scroll-line {
+  width: 1px; height: 50px; background: linear-gradient(var(--gold), transparent);
+  margin: 0 auto;
+}
+@keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
+
+/* ──── STATS BAND ──── */
+.stats-band {
+  background: linear-gradient(135deg, var(--slate), var(--steel));
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  padding: 3rem 2rem;
+}
+
+.stats-grid {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem;
+}
+
+.stat-card {
+  text-align: center; padding: 1.5rem;
+  border-right: 1px solid var(--border);
+  animation: fadeInUp 0.8s ease both;
+}
+.stat-card:last-child { border-right: none; }
+
+.stat-num {
+  font-family: 'Eczar', serif; font-size: 2.4rem; font-weight: 800;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  display: block; line-height: 1;
+}
+
+.stat-unit { font-family: 'Poppins', sans-serif; font-size: 0.75rem; color: var(--gold); font-weight: 600; letter-spacing: 1px; }
+.stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.4rem; line-height: 1.3; }
+
+/* ──── SECTION ──── */
+.section { padding: 5rem 2rem; position: relative; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+
+.section-tag {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: 'Poppins', sans-serif; font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1rem;
+}
+.section-tag::before {
+  content: ''; display: block; width: 24px; height: 2px; background: var(--gold);
+}
+
+.section-title {
+  font-family: 'Eczar', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700;
+  color: var(--white); margin-bottom: 0.6rem;
+}
+
+.section-desc { color: var(--text-muted); font-size: 0.95rem; max-width: 600px; margin-bottom: 3rem; line-height: 1.8; }
+
+/* ──── BUDGET DONUT ──── */
+.budget-overview { background: linear-gradient(180deg, var(--midnight) 0%, var(--navy) 100%); }
+
+.overview-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+}
+@media(max-width:768px) { .overview-grid { grid-template-columns: 1fr; } }
+
+.donut-container {
+  position: relative; width: 340px; height: 340px; margin: 0 auto;
+}
+
+.donut-svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+
+.donut-center {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center;
+}
+
+.donut-total {
+  font-family: 'Eczar', serif; font-size: 1.8rem; font-weight: 800;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.donut-label { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem; }
+
+.legend-list { display: flex; flex-direction: column; gap: 1rem; }
+
+.legend-item {
+  display: flex; align-items: center; gap: 1rem; padding: 1rem 1.2rem;
+  background: var(--glass); border: 1px solid var(--glass-border);
+  border-radius: 12px; cursor: pointer; transition: all 0.3s ease;
+  position: relative; overflow: hidden;
+}
+.legend-item::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+}
+.legend-item:hover { background: rgba(255,255,255,0.07); transform: translateX(4px); }
+
+.legend-dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
+.legend-info { flex: 1; }
+.legend-name { font-size: 0.9rem; font-weight: 500; color: var(--text-light); }
+.legend-pct { font-family: 'Poppins', sans-serif; font-size: 0.75rem; color: var(--text-muted); }
+.legend-amt { font-family: 'Eczar', serif; font-size: 1rem; font-weight: 700; color: var(--gold); }
+
+/* ──── SECTOR CARDS ──── */
+.sectors-bg { background: var(--navy); }
+
+.sectors-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem;
+}
+
+.sector-card {
+  background: var(--glass); border: 1px solid var(--glass-border);
+  border-radius: 16px; padding: 1.5rem; cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative; overflow: hidden;
+  animation: fadeInUp 0.6s ease both;
+}
+
+.sector-card::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, transparent, transparent);
+  opacity: 0; transition: opacity 0.4s ease;
+}
+.sector-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+.sector-card:hover::before { opacity: 1; }
+
+.sector-icon {
+  width: 52px; height: 52px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem; margin-bottom: 1rem;
+}
+
+.sector-name {
+  font-family: 'Eczar', serif; font-size: 1.05rem; font-weight: 700;
+  color: var(--white); margin-bottom: 0.4rem; line-height: 1.3;
+}
+
+.sector-amount {
+  font-family: 'Poppins', sans-serif; font-size: 0.85rem; color: var(--gold); font-weight: 600;
+}
+
+.sector-bar-wrap { margin-top: 1rem; background: rgba(255,255,255,0.08); border-radius: 4px; height: 4px; overflow: hidden; }
+.sector-bar { height: 100%; border-radius: 4px; transition: width 1.5s cubic-bezier(0.25,0.46,0.45,0.94); width: 0; }
+
+.sector-detail { margin-top: 0.8rem; font-size: 0.78rem; color: var(--text-muted); line-height: 1.6; display: none; }
+.sector-card.expanded .sector-detail { display: block; }
+
+/* ──── REVENUE ──── */
+.revenue-bg { background: linear-gradient(180deg, var(--navy) 0%, var(--midnight) 100%); }
+
+.revenue-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+@media(max-width:768px) { .revenue-grid { grid-template-columns: 1fr; } }
+
+.bar-chart-wrap { display: flex; flex-direction: column; gap: 1rem; }
+
+.bar-item { display: flex; flex-direction: column; gap: 0.4rem; }
+.bar-label { font-size: 0.82rem; color: var(--text-light); display: flex; justify-content: space-between; }
+.bar-label span { color: var(--gold); font-family: 'Poppins', sans-serif; font-size: 0.78rem; font-weight: 600; }
+.bar-track { height: 10px; background: rgba(255,255,255,0.07); border-radius: 6px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 6px; transition: width 1.5s ease; width: 0; }
+
+/* ──── TIMELINE REFORMS ──── */
+.reforms-bg { background: var(--midnight); }
+.timeline { position: relative; padding-left: 2rem; }
+.timeline::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
+  background: linear-gradient(var(--gold), var(--crimson), var(--teal));
+}
+
+.tl-item {
+  position: relative; padding: 1.5rem 1.5rem 2rem; margin-bottom: 0.5rem;
+  background: var(--glass); border: 1px solid var(--glass-border);
+  border-radius: 12px; margin-left: 1rem;
+  animation: slideInLeft 0.6s ease both;
+  transition: all 0.3s ease;
+}
+.tl-item:hover { background: rgba(255,255,255,0.06); transform: translateX(6px); }
+
+.tl-dot {
+  position: absolute; left: -2.5rem; top: 1.7rem;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--gold); border: 3px solid var(--midnight);
+  box-shadow: 0 0 10px var(--gold);
+}
+
+.tl-category {
+  font-family: 'Poppins', sans-serif; font-size: 0.65rem; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+
+.tl-title {
+  font-family: 'Eczar', serif; font-size: 1rem; font-weight: 700;
+  color: var(--white); margin-bottom: 0.4rem;
+}
+
+.tl-desc { font-size: 0.83rem; color: var(--text-muted); line-height: 1.6; }
+
+/* ──── HIGHLIGHTS PANEL ──── */
+.highlights-bg { background: linear-gradient(135deg, var(--navy), var(--slate)); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+.highlight-tabs { display: flex; gap: 0.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+
+.tab-btn {
+  padding: 0.6rem 1.2rem; border-radius: 50px; border: 1px solid var(--border);
+  background: transparent; color: var(--text-muted); font-size: 0.8rem; font-family: 'Poppins', sans-serif;
+  cursor: pointer; transition: all 0.3s ease; white-space: nowrap;
+}
+.tab-btn.active, .tab-btn:hover {
+  background: linear-gradient(135deg, var(--crimson), var(--deep-red));
+  color: var(--white); border-color: var(--crimson); box-shadow: 0 4px 20px rgba(196,30,58,0.3);
+}
+
+.tab-content { display: none; animation: fadeIn 0.4s ease; }
+.tab-content.active { display: block; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.highlights-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+
+.highlight-card {
+  background: var(--glass); border: 1px solid var(--glass-border);
+  border-radius: 12px; padding: 1.2rem 1.4rem;
+  display: flex; gap: 1rem; align-items: flex-start;
+  transition: all 0.3s ease;
+}
+.highlight-card:hover { background: rgba(255,255,255,0.07); transform: translateY(-2px); }
+
+.hc-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+.hc-body {}
+.hc-title { font-size: 0.88rem; font-weight: 600; color: var(--white); margin-bottom: 0.2rem; line-height: 1.4; }
+.hc-detail { font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; }
+.hc-amount { font-family: 'Poppins', sans-serif; font-size: 0.72rem; color: var(--gold); font-weight: 600; margin-top: 0.3rem; }
+
+/* ──── FISCAL TABLE ──── */
+.fiscal-bg { background: var(--midnight); }
+
+.fiscal-table-wrap { overflow-x: auto; border-radius: 16px; border: 1px solid var(--border); }
+
+table { width: 100%; border-collapse: collapse; }
+th {
+  background: linear-gradient(135deg, var(--slate), var(--steel));
+  color: var(--gold); font-family: 'Poppins', sans-serif; font-size: 0.75rem;
+  font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  padding: 1rem 1.2rem; text-align: left; border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+td {
+  padding: 0.9rem 1.2rem; font-size: 0.85rem; border-bottom: 1px solid rgba(255,255,255,0.04);
+  color: var(--text-light);
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(255,255,255,0.03); }
+.td-num { font-family: 'Poppins', sans-serif; text-align: right; color: var(--gold); font-weight: 600; }
+.td-label { font-weight: 600; color: var(--white); }
+.td-muted { color: var(--text-muted); font-size: 0.78rem; }
+
+/* ──── INFOGRAPHIC PILLARS ──── */
+.pillars-bg { background: linear-gradient(135deg, var(--navy), var(--midnight)); }
+
+.pillars-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem;
+}
+
+.pillar-card {
+  text-align: center; padding: 2rem 1.2rem;
+  background: var(--glass); border: 1px solid var(--glass-border);
+  border-radius: 20px; position: relative; overflow: hidden;
+  transition: all 0.4s ease;
+  animation: fadeInUp 0.6s ease both;
+}
+.pillar-card::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+}
+.pillar-card:hover { transform: translateY(-8px); box-shadow: 0 24px 48px rgba(0,0,0,0.5); }
+
+.pillar-num {
+  font-family: 'Eczar', serif; font-size: 3rem; font-weight: 800;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  display: block; line-height: 1;
+}
+.pillar-unit { font-family: 'Poppins', sans-serif; font-size: 0.7rem; color: var(--gold); font-weight: 600; display: block; margin-bottom: 0.5rem; }
+.pillar-name { font-size: 0.85rem; color: var(--text-light); line-height: 1.4; }
+
+/* ──── QUOTES ──── */
+.quote-section { background: var(--slate); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 4rem 2rem; }
+
+.quote-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+
+.quote-mark { font-family: 'Yatra One', serif; font-size: 6rem; color: var(--gold); opacity: 0.3; line-height: 0.5; display: block; }
+
+.quote-text {
+  font-family: 'Eczar', serif; font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: var(--white); line-height: 1.7; font-weight: 500; margin: 1rem 0;
+}
+
+.quote-attr { font-family: 'Poppins', sans-serif; font-size: 0.8rem; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; }
+
+/* ──── FOOTER ──── */
+.footer {
+  background: linear-gradient(135deg, var(--midnight), #000);
+  border-top: 1px solid var(--border); padding: 3rem 2rem; text-align: center;
+}
+.footer-title { font-family: 'Yatra One', serif; font-size: 1.2rem; color: var(--gold); margin-bottom: 0.5rem; }
+.footer-sub { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+.footer-divider { width: 60px; height: 2px; background: var(--gold); margin: 1rem auto; opacity: 0.4; }
+.footer-note { font-size: 0.72rem; color: var(--text-muted); font-family: 'Poppins', sans-serif; }
+
+/* ──── NAV ──── */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10,14,26,0.85); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border); padding: 0.8rem 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  transform: translateY(-100%); transition: transform 0.5s ease;
+}
+.nav.visible { transform: translateY(0); }
+
+.nav-logo { font-family: 'Eczar', serif; font-size: 1rem; color: var(--gold); font-weight: 700; }
+.nav-links { display: flex; gap: 1.5rem; }
+.nav-link {
+  font-family: 'Poppins', sans-serif; font-size: 0.75rem; color: var(--text-muted);
+  text-decoration: none; transition: color 0.3s; letter-spacing: 0.5px;
+}
+.nav-link:hover { color: var(--gold); }
+
+/* ──── ANIMATIONS ──── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ──── PROGRESS RINGS ──── */
+.ring-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+
+.ring-item { text-align: center; }
+.ring-svg { width: 110px; height: 110px; transform: rotate(-90deg); }
+.ring-bg { fill: none; stroke: rgba(255,255,255,0.08); stroke-width: 8; }
+.ring-fg { fill: none; stroke-width: 8; stroke-linecap: round; transition: stroke-dashoffset 2s cubic-bezier(0.25,0.46,0.45,0.94); }
+.ring-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.6rem; line-height: 1.3; }
+.ring-pct { font-family: 'Poppins', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--white); }
+
+/* ──── COMPARISON BARS ──── */
+.compare-row {
+  display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;
+  padding: 0.8rem 1rem; background: var(--glass); border-radius: 10px; border: 1px solid var(--glass-border);
+}
+.compare-label { min-width: 160px; font-size: 0.82rem; color: var(--text-light); }
+.compare-track { flex: 1; height: 8px; background: rgba(255,255,255,0.07); border-radius: 4px; overflow: hidden; position: relative; }
+.compare-fill { height: 100%; border-radius: 4px; transition: width 1.8s ease; width: 0; }
+.compare-val { min-width: 80px; text-align: right; font-family: 'Poppins', sans-serif; font-size: 0.78rem; color: var(--gold); font-weight: 600; }
+
+/* ──── TOOLTIP ──── */
+.tooltip { position: relative; display: inline-block; }
+.tooltip-text {
+  visibility: hidden; background: var(--steel); color: var(--white); font-size: 0.75rem;
+  padding: 0.5rem 0.8rem; border-radius: 8px; position: absolute; bottom: 125%; left: 50%;
+  transform: translateX(-50%); white-space: nowrap; opacity: 0; transition: opacity 0.3s;
+  border: 1px solid var(--border); z-index: 10;
+  font-family: 'Poppins', sans-serif;
+}
+.tooltip:hover .tooltip-text { visibility: visible; opacity: 1; }
+
+/* ──── ROAD INFRASTRUCTURE VIZ ──── */
+.road-visual {
+  background: var(--glass); border: 1px solid var(--glass-border); border-radius: 16px;
+  padding: 2rem; margin-top: 1.5rem;
+}
+.road-item {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 0.8rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.road-item:last-child { border-bottom: none; }
+.road-name { font-size: 0.85rem; color: var(--text-light); flex: 1; }
+.road-budget { font-family: 'Poppins', sans-serif; font-size: 0.85rem; color: var(--gold); font-weight: 600; white-space: nowrap; }
+.road-tag { font-size: 0.68rem; padding: 0.2rem 0.6rem; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 600; letter-spacing: 0.5px; }
+
+/* ──── MARQUEE ──── */
+.marquee-wrap { background: linear-gradient(90deg, var(--crimson), var(--deep-red)); padding: 0.8rem 0; overflow: hidden; }
+.marquee { display: flex; animation: marquee 30s linear infinite; gap: 4rem; white-space: nowrap; }
+.marquee-item { font-family: 'Poppins', sans-serif; font-size: 0.75rem; color: rgba(255,255,255,0.9); font-weight: 500; padding: 0 1rem; }
+.marquee-sep { color: var(--gold-light); }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+@media(max-width:600px) {
+  .stats-grid { grid-template-columns: repeat(2,1fr); }
+  .stat-card { border-right: none; border-bottom: 1px solid var(--border); }
+  .nav-links { display: none; }
+  .sectors-grid { grid-template-columns: 1fr; }
+  .pillars-grid { grid-template-columns: repeat(2,1fr); }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <div class="nav-logo">बजेट २०८३/८४</div>
+  <div class="nav-links">
+    <a href="#overview" class="nav-link">सारांश</a>
+    <a href="#sectors" class="nav-link">क्षेत्रगत</a>
+    <a href="#revenue" class="nav-link">राजस्व</a>
+    <a href="#reforms" class="nav-link">सुधार</a>
+    <a href="#highlights" class="nav-link">मुख्य कार्यक्रम</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-emblem">🏔</div>
+    <div class="hero-badge">नेपाल सरकार · अर्थ मन्त्रालय</div>
+    <h1 class="hero-title">बजेट <span>वक्तव्य</span></h1>
+    <div class="hero-subtitle">आर्थिक वर्ष २०८३/८४</div>
+    <p class="hero-meta">अर्थमन्त्री <span>डा. स्वर्णिम वाग्ले</span> द्वारा प्रस्तुत · जेठ १५, २०८३</p>
+  </div>
+  <div class="hero-scroll"><div class="hero-scroll-line"></div></div>
+</section>
+
+<!-- MARQUEE --> <div class="marquee-wrap">
+  <div class="marquee">
+    <span class="marquee-item">कुल बजेट: रू. २,१२४ अर्ब ३४ करोड <span class="marquee-sep">◆</span></span>
+    <span class="marquee-item">आयकर छुट सीमा दोब्बर: रू. १० लाख <span class="marquee-sep">◆</span></span>
+    <span class="marquee-item">७% आर्थिक वृद्धि लक्ष्य <span class="marquee-sep">◆</span></span>
+    <span class="marquee-item">कर्मचारी तलब वृद्धि: २१% खुद <span class="marquee-sep">◆</span></span>
+    <span class="marquee-item">नयाँ जलविद्युत: १,०४० मेगावाट थप <span class="marquee-sep">◆</span></span>
+    <span class="marquee-item">स्वास्थ्य बीमा: ९०% जनसंख्या ३ वर्षमा <span class="marquee-sep">◆</span></span>
+    <span class="marquee-item">सावर्भौम एआई केन्द्र स्थापना <span class="marquee-sep">◆</span></span>
+    <span class="marquee-item">कुल बजेट: रू. २,१२४ अर्ब ३४ करोड <span class="marquee-sep">◆</span></span>
+    <span class="marquee-item">आयकर छुट सीमा दोब्बर: रू. १० लाख <span class="marquee-sep">◆</span></span>
+    <span class="marquee-item">७% आर्थिक वृद्धि लक्ष्य <span class="marquee-sep">◆</span></span>
+    <span class="marquee-item">कर्मचारी तलब वृद्धि: २१% खुद <span class="marquee-sep">◆</span></span>
+    <span class="marquee-item">नयाँ जलविद्युत: १,०४० मेगावाट थप <span class="marquee-sep">◆</span></span>
+    <span class="marquee-item">स्वास्थ्य बीमा: ९०% जनसंख्या ३ वर्षमा <span class="marquee-sep">◆</span></span>
+    <span class="marquee-item">सावर्भौम एआई केन्द्र स्थापना <span class="marquee-sep">◆</span></span>
+  </div>
+</div>
+
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="stats-grid">
+    <div class="stat-card reveal">
+      <span class="stat-num" data-count="2124" data-decimal="34">२,१२४</span>
+      <span class="stat-unit">अर्ब</span>
+      <div class="stat-label">कुल बजेट विनियोजन</div>
+    </div>
+    <div class="stat-card reveal">
+      <span class="stat-num">१,४०५</span>
+      <span class="stat-unit">अर्ब</span>
+      <div class="stat-label">राजस्व अनुमान</div>
+    </div>
+    <div class="stat-card reveal">
+      <span class="stat-num">७</span>
+      <span class="stat-unit">%</span>
+      <div class="stat-label">आर्थिक वृद्धि लक्ष्य</div>
+    </div>
+    <div class="stat-card reveal">
+      <span class="stat-num">६</span>
+      <span class="stat-unit">%</span>
+      <div class="stat-label">मूल्य वृद्धि सीमा</div>
+    </div>
+    <div class="stat-card reveal">
+      <span class="stat-num">५५३५</span>
+      <span class="stat-unit">मे.वा.</span>
+      <div class="stat-label">कुल जडित विद्युत क्षमता</div>
+    </div>
+    <div class="stat-card reveal">
+      <span class="stat-num">२५.२</span>
+      <span class="stat-unit">%</span>
+      <div class="stat-label">संशोधित अनुमानभन्दा वृद्धि</div>
+    </div>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section class="section budget-overview" id="overview">
+  <div class="section-inner">
+    <div class="section-tag">बजेट संरचना</div>
+    <h2 class="section-title">विनियोजनको संरचना</h2>
+    <p class="section-desc">कुल रू. २,१२४ अर्ब ३४ करोड बजेटको खर्च वर्गीकरण — चालु, पूँजीगत र वित्तीय व्यवस्थाका आधारमा।</p>
+
+    <div class="overview-grid reveal">
+      <div class="donut-container">
+        <svg class="donut-svg" viewBox="0 0 200 200" id="donutSvg">
+          <circle class="donut-track" cx="100" cy="100" r="80" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="28"/>
+          <!-- Segments animated in JS -->
+          <circle id="seg1" cx="100" cy="100" r="80" fill="none" stroke="#C41E3A" stroke-width="28" stroke-dasharray="0 502.65" stroke-linecap="round"/>
+          <circle id="seg2" cx="100" cy="100" r="80" fill="none" stroke="#D4AF37" stroke-width="28" stroke-dasharray="0 502.65" stroke-linecap="round"/>
+          <circle id="seg3" cx="100" cy="100" r="80" fill="none" stroke="#00B4D8" stroke-width="28" stroke-dasharray="0 502.65" stroke-linecap="round"/>
+        </svg>
+        <div class="donut-center">
+          <div class="donut-total">२,१२४</div>
+          <div class="donut-label">अर्ब रूपैयाँ</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="legend-list">
+          <div class="legend-item" style="--lc:#C41E3A" onclick="highlightSeg(0)">
+            <div style="border-left:3px solid #C41E3A;position:absolute;left:0;top:0;bottom:0;border-radius:12px 0 0 12px;"></div>
+            <div class="legend-dot" style="background:#C41E3A;box-shadow:0 0 8px #C41E3A"></div>
+            <div class="legend-info">
+              <div class="legend-name">चालु खर्च</div>
+              <div class="legend-pct">५९.८% — तलब, पेन्सन, सामाजिक सुरक्षा</div>
+            </div>
+            <div class="legend-amt">१,२७०.५८ अर्ब</div>
+          </div>
+          <div class="legend-item" onclick="highlightSeg(1)">
+            <div style="border-left:3px solid #D4AF37;position:absolute;left:0;top:0;bottom:0;border-radius:12px 0 0 12px;"></div>
+            <div class="legend-dot" style="background:#D4AF37;box-shadow:0 0 8px #D4AF37"></div>
+            <div class="legend-info">
+              <div class="legend-name">पूँजीगत खर्च</div>
+              <div class="legend-pct">२०.३% — पूर्वाधार, विकास आयोजना</div>
+            </div>
+            <div class="legend-amt">४३१.१० अर्ब</div>
+          </div>
+          <div class="legend-item" onclick="highlightSeg(2)">
+            <div style="border-left:3px solid #00B4D8;position:absolute;left:0;top:0;bottom:0;border-radius:12px 0 0 12px;"></div>
+            <div class="legend-dot" style="background:#00B4D8;box-shadow:0 0 8px #00B4D8"></div>
+            <div class="legend-info">
+              <div class="legend-name">वित्तीय व्यवस्था</div>
+              <div class="legend-pct">१९.९% — ऋण भुक्तानी, लगानी</div>
+            </div>
+            <div class="legend-amt">४२२.६४ अर्ब</div>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem;padding:1.2rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:12px;">
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.8rem;font-family:'Poppins',sans-serif;letter-spacing:0.5px;">स्रोत विभाजन</div>
+          <div class="compare-row" style="margin-bottom:0.5rem">
+            <span class="compare-label" style="min-width:110px;font-size:0.78rem">राजस्व</span>
+            <div class="compare-track"><div class="compare-fill" style="background:linear-gradient(90deg,#2D9B6F,#4ADE80);width:0" data-width="66.1"></div></div>
+            <span class="compare-val">१,४०५ अर्ब</span>
+          </div>
+          <div class="compare-row" style="margin-bottom:0.5rem">
+            <span class="compare-label" style="min-width:110px;font-size:0.78rem">वैदेशिक ऋण</span>
+            <div class="compare-track"><div class="compare-fill" style="background:linear-gradient(90deg,#4A90D9,#7EC8E3);width:0" data-width="11.6"></div></div>
+            <span class="compare-val">२४७ अर्ब</span>
+          </div>
+          <div class="compare-row">
+            <span class="compare-label" style="min-width:110px;font-size:0.78rem">आन्तरिक ऋण</span>
+            <div class="compare-track"><div class="compare-fill" style="background:linear-gradient(90deg,#F4A62A,#FDD835);width:0" data-width="19.3"></div></div>
+            <span class="compare-val">४१० अर्ब</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Expenditure pillars -->
+    <div style="margin-top:4rem;">
+      <div class="section-tag">कार्यगत वर्गीकरण</div>
+      <h3 style="font-family:'Eczar',serif;font-size:1.5rem;color:var(--white);margin-bottom:2rem">मन्त्रालयगत प्रमुख विनियोजन</h3>
+      <div class="pillars-grid reveal">
+        <div class="pillar-card" style="--ac:#C41E3A;">
+          <span class="pillar-num">२८६</span><span class="pillar-unit">अर्ब</span>
+          <div class="pillar-name">सडक तथा सहरी पूर्वाधार</div>
+          <div style="margin-top:0.8rem;font-size:0.72rem;color:var(--text-muted)">पूर्वाधार विकास मन्त्रालय</div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#C41E3A,#8B0000)"></div>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-num">२१८</span><span class="pillar-unit">अर्ब</span>
+          <div class="pillar-name">शिक्षा तथा खेलकुद</div>
+          <div style="margin-top:0.8rem;font-size:0.72rem;color:var(--text-muted)">शिक्षा मन्त्रालय</div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#D4AF37,#F5D776)"></div>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-num">१०२</span><span class="pillar-unit">अर्ब</span>
+          <div class="pillar-name">स्वास्थ्य तथा स्वच्छता</div>
+          <div style="margin-top:0.8rem;font-size:0.72rem;color:var(--text-muted)">स्वास्थ्य मन्त्रालय</div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#00B4D8,#48CAE4)"></div>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-num">१२०</span><span class="pillar-unit">अर्ब</span>
+          <div class="pillar-name">सामाजिक सुरक्षा</div>
+          <div style="margin-top:0.8rem;font-size:0.72rem;color:var(--text-muted)">महिला, बालबालिका मन्त्रालय</div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#2D9B6F,#52D68A)"></div>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-num">८५.५</span><span class="pillar-unit">अर्ब</span>
+          <div class="pillar-name">ऊर्जा उत्पादन र प्रसारण</div>
+          <div style="margin-top:0.8rem;font-size:0.72rem;color:var(--text-muted)">ऊर्जा, जलस्रोत मन्त्रालय</div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#F4A62A,#FDD835)"></div>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-num">४६.९</span><span class="pillar-unit">अर्ब</span>
+          <div class="pillar-name">कृषि तथा पशुपन्छी</div>
+          <div style="margin-top:0.8rem;font-size:0.72rem;color:var(--text-muted)">कृषि, वन मन्त्रालय</div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#7B2D8B,#A855F7)"></div>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-num">३७.२</span><span class="pillar-unit">अर्ब</span>
+          <div class="pillar-name">खानेपानी तथा सरसफाई</div>
+          <div style="margin-top:0.8rem;font-size:0.72rem;color:var(--text-muted)">खानेपानी मन्त्रालय</div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#0EA5E9,#38BDF8)"></div>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-num">३२.५</span><span class="pillar-unit">अर्ब</span>
+          <div class="pillar-name">रासायनिक मल</div>
+          <div style="margin-top:0.8rem;font-size:0.72rem;color:var(--text-muted)">कृषि आधुनिकीकरण</div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#16A34A,#4ADE80)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTOR CARDS -->
+<section class="section sectors-bg" id="sectors">
+  <div class="section-inner">
+    <div class="section-tag">क्षेत्रगत लगानी</div>
+    <h2 class="section-title">प्रमुख क्षेत्रहरू र कार्यक्रम</h2>
+    <p class="section-desc">क्लिक गरेर विस्तृत विवरण हेर्नुस्।</p>
+
+    <div class="sectors-grid">
+
+      <div class="sector-card reveal" onclick="toggleSector(this)" style="animation-delay:0.1s;border-top:3px solid #C41E3A">
+        <div class="sector-icon" style="background:rgba(196,30,58,0.15)">🛣️</div>
+        <div class="sector-name">सडक पूर्वाधार</div>
+        <div class="sector-amount">रू. २८६ अर्ब ४८ करोड</div>
+        <div class="sector-bar-wrap"><div class="sector-bar" style="background:linear-gradient(90deg,#C41E3A,#FF6B6B)" data-width="100"></div></div>
+        <div class="sector-detail">
+          ▸ ~१,००० किमि सडक कालोपत्रे<br>
+          ▸ २७५ वटा सडक पुल निर्माण<br>
+          ▸ पूर्व-पश्चिम राजमार्ग ४ लेनमा स्तरोन्नति (रू. ३७.४ अर्ब)<br>
+          ▸ काठमाडौँ-तराई रुटमार्ग (रू. १७.६ अर्ब) — ४० पुल, ५.४ किमि सुरुङ<br>
+          ▸ हुलाकी राजमार्ग (रू. ४.६५ अर्ब)<br>
+          ▸ पुष्पलाल मध्यपहाडी राजमार्ग (रू. २.१६ अर्ब)<br>
+          ▸ मदन भण्डारी राजमार्ग (रू. १.४६ अर्ब)<br>
+          ▸ सडक ममत्र सम्भार (रू. २८.५२ अर्ब)<br>
+          ▸ नागढुङ्गा सुरुङ साउनदेखि सञ्चालन<br>
+          ▸ नागढुङ्गा-मुग्लिङ स्तरोन्नति (रू. ६.५५ अर्ब)
+        </div>
+      </div>
+
+      <div class="sector-card reveal" onclick="toggleSector(this)" style="animation-delay:0.15s;border-top:3px solid #D4AF37">
+        <div class="sector-icon" style="background:rgba(212,175,55,0.15)">⚡</div>
+        <div class="sector-name">स्वच्छ ऊर्जा विकास</div>
+        <div class="sector-amount">रू. ८५ अर्ब ५४ करोड</div>
+        <div class="sector-bar-wrap"><div class="sector-bar" style="background:linear-gradient(90deg,#D4AF37,#FDD835)" data-width="30"></div></div>
+        <div class="sector-detail">
+          ▸ जलविद्युतबाट ६७० + सौर्यबाट ३७० = <strong>१,०४० मेगावाट</strong> थप<br>
+          ▸ कुल जडित क्षमता ५,५३५ मेगावाट<br>
+          ▸ राहुघाट (४० मे.वा.) यसै वर्ष सम्पन्न<br>
+          ▸ माथिल्लो अरुण (१,०६१ मे.वा.) ठेक्का सुरु<br>
+          ▸ उत्तरगंगा (८२८ मे.वा.) ठेक्का प्रक्रिया<br>
+          ▸ बुढीगण्डकी (१,२०० मे.वा.) निर्माण अघि बढाउने<br>
+          ▸ दुधकोशी (६७० मे.वा.) फाइनान्सियल क्लोजर<br>
+          ▸ बेतन कर्णाली (४३९ मे.वा.) ठेक्का सुरु<br>
+          ▸ प्रसारण लाइन (रू. ७० अर्ब)<br>
+          ▸ हेटौंडामा ग्रीन हाइड्रोजन पाइलट (२.५ मे.वा.)<br>
+          ▸ काठमाडौँमा १०० मे.वा. ब्याट्री स्टोरेज<br>
+          ▸ NEA तीन कम्पनीमा विभाजन
+        </div>
+      </div>
+
+      <div class="sector-card reveal" onclick="toggleSector(this)" style="animation-delay:0.2s;border-top:3px solid #00B4D8">
+        <div class="sector-icon" style="background:rgba(0,180,216,0.15)">🎓</div>
+        <div class="sector-name">शिक्षा तथा खेलकुद</div>
+        <div class="sector-amount">रू. २१८ अर्ब ३० करोड</div>
+        <div class="sector-bar-wrap"><div class="sector-bar" style="background:linear-gradient(90deg,#00B4D8,#48CAE4)" data-width="77"></div></div>
+        <div class="sector-detail">
+          ▸ छात्रवृत्ति (रू. ८.६ अर्ब)<br>
+          ▸ विद्यालय पूर्वाधार म्यापिङ (रू. १ अर्ब)<br>
+          ▸ गेटाको सहिद दशरथचन्द स्वास्थ्य विश्वविद्यालयमा MBBS<br>
+          ▸ चिकित्सा, नर्सिङ, IT कोटा वृद्धि<br>
+          ▸ माथिल्लो अरुण, मुस्ताङमा ऐतिहासिक बौद्ध गुम्बा संरक्षण<br>
+          ▸ फुटबल रङ्गशाला (१० वटा, ८,०००+ दर्शक क्षमता)<br>
+          ▸ इन्डोर स्टेडियम ७ शहरमा<br>
+          ▸ मूलपानी क्रिकेट रङ्गशाला लगानी मोडालिटी<br>
+          ▸ खेलाडीलाई आजीवन निःशुल्क स्वास्थ्य उपचार<br>
+          ▸ खेलकुद (रू. ४.०३ अर्ब)
+        </div>
+      </div>
+
+      <div class="sector-card reveal" onclick="toggleSector(this)" style="animation-delay:0.25s;border-top:3px solid #2D9B6F">
+        <div class="sector-icon" style="background:rgba(45,155,111,0.15)">🏥</div>
+        <div class="sector-name">स्वास्थ्य सेवा</div>
+        <div class="sector-amount">रू. १०१ अर्ब ९५ करोड</div>
+        <div class="sector-bar-wrap"><div class="sector-bar" style="background:linear-gradient(90deg,#2D9B6F,#52D68A)" data-width="36"></div></div>
+        <div class="sector-detail">
+          ▸ स्वास्थ्य बीमा (रू. १५ अर्ब) — ९०% नेपाली ३ वर्षमा<br>
+          ▸ विपन्न उपचार, आमा सुरक्षा (रू. १३.१५ अर्ब)<br>
+          ▸ ३३६ आधारभूत अस्पताल निर्माण सम्पन्न (रू. ५.९ अर्ब)<br>
+          ▸ नेपाल औषधि लिमिटेड — २५ प्रकार औषधि उत्पादन<br>
+          ▸ FDA (Food & Drug Administration) स्थापना<br>
+          ▸ जलन उपचार युनिट स्थापना<br>
+          ▸ बालबालिकाको क्यान्सर निःशुल्क उपचार<br>
+          ▸ नर्सिङको रात्रि ड्युटी भत्ता दोब्बर<br>
+          ▸ FCHV यातायात खर्च ५०% वृद्धि<br>
+          ▸ राष्ट्रिय ट्रमा नीति तर्जुमा<br>
+          ▸ टेलिमेडिसिन (कर्णाली, सुदूरपश्चिम)
+        </div>
+      </div>
+
+      <div class="sector-card reveal" onclick="toggleSector(this)" style="animation-delay:0.3s;border-top:3px solid #7B2D8B">
+        <div class="sector-icon" style="background:rgba(123,45,139,0.15)">🌾</div>
+        <div class="sector-name">कृषि विकास</div>
+        <div class="sector-amount">रू. ४६ अर्ब ९२ करोड</div>
+        <div class="sector-bar-wrap"><div class="sector-bar" style="background:linear-gradient(90deg,#7B2D8B,#C084FC)" data-width="16.5"></div></div>
+        <div class="sector-detail">
+          ▸ रासायनिक मल (रू. ३२.४६ अर्ब)<br>
+          ▸ रू. २ करोडसम्म प्रारम्भिक पूँजी लगाउने किसानलाई ४०% प्रोत्साहन अनुदान<br>
+          ▸ कृषि बीमा प्रिमियममा ८०% सम्म अनुदान<br>
+          ▸ कृषि बीमा अनुदान (रू. २.१९ अर्ब)<br>
+          ▸ कृषि आधुनिकीकरण (रू. २.०७ अर्ब)<br>
+          ▸ किसान परिचयपत्र वितरण<br>
+          ▸ ग्रीन युरिया मल उद्योग (NEA + निजी)<br>
+          ▸ वेयरहाउस रसिद फाइनान्सिङ<br>
+          ▸ सिराहा, सप्तरी, सल्लाहीमा टमाटर प्रशोधन केन्द्र<br>
+          ▸ भूमिहीन दलित, सुकुम्बासीको व्यवस्थापन
+        </div>
+      </div>
+
+      <div class="sector-card reveal" onclick="toggleSector(this)" style="animation-delay:0.35s;border-top:3px solid #F4A62A">
+        <div class="sector-icon" style="background:rgba(244,166,42,0.15)">💧</div>
+        <div class="sector-name">सिँचाई विकास</div>
+        <div class="sector-amount">रू. ३७ अर्ब</div>
+        <div class="sector-bar-wrap"><div class="sector-bar" style="background:linear-gradient(90deg,#F4A62A,#FDD835)" data-width="13"></div></div>
+        <div class="sector-detail">
+          ▸ १५,८०० हेक्टर नयाँ सिँचाई<br>
+          ▸ सिँचित क्षेत्रफल ६४% पुग्ने<br>
+          ▸ सुनकोशी मरिन डाइभर्सन (रू. २.९८ अर्ब)<br>
+          ▸ बागमती सिँचाई — १,२२,००० हेक्टर (रू. ५३ करोड)<br>
+          ▸ बबई सिँचाई (रू. ५.६३ अर्ब)<br>
+          ▸ सिक्टा सिँचाई (रू. २.५५ अर्ब)<br>
+          ▸ महाकाली सिँचाई विस्तार (रू. ५.१३ अर्ब)<br>
+          ▸ तराईमा भूमिगत सिँचाई (रू. १.८३ अर्ब)<br>
+          ▸ पहाडमा लिफ्ट सिँचाई (रू. ८० करोड)<br>
+          ▸ ७० किमि तटबन्ध निर्माण
+        </div>
+      </div>
+
+      <div class="sector-card reveal" onclick="toggleSector(this)" style="animation-delay:0.4s;border-top:3px solid #0EA5E9">
+        <div class="sector-icon" style="background:rgba(14,165,233,0.15)">🏙️</div>
+        <div class="sector-name">खानेपानी तथा शहरी विकास</div>
+        <div class="sector-amount">रू. ३७ अर्ब १७ करोड</div>
+        <div class="sector-bar-wrap"><div class="sector-bar" style="background:linear-gradient(90deg,#0EA5E9,#38BDF8)" data-width="13.1"></div></div>
+        <div class="sector-detail">
+          ▸ ५ वर्षमा १००% नागरिकलाई सुरक्षित खानेपानी<br>
+          ▸ ३ वर्षमा ६५% सम्म खानेपानी<br>
+          ▸ मेलम्ची (रू. ७.२६ अर्ब) — यांग्री, लाखे खोला थप<br>
+          ▸ तराईमा २८० आयोजना (रू. २.५ अर्ब)<br>
+          ▸ आर्सेनिकमुक्त तराई अभियान<br>
+          ▸ काठमाडौँमा ७.२७ करोड लिटर/दिन फोहोरपानी प्रशोधन (रू. ३.४६ अर्ब)<br>
+          ▸ मध्यपहाडी लोकमार्गमा १२ स्थानमा सहर निर्माण<br>
+          ▸ फोहोरमैला व्यवस्थापन, हरियाली नदी (रू. ४.१९ अर्ब)<br>
+          ▸ झोलङ्गे पुल निर्माण (रू. ५.१४ अर्ब)<br>
+          ▸ मेचीनगरमा १०० वटा आवासीय भवन
+        </div>
+      </div>
+
+      <div class="sector-card reveal" onclick="toggleSector(this)" style="animation-delay:0.45s;border-top:3px solid #EC4899">
+        <div class="sector-icon" style="background:rgba(236,72,153,0.15)">🤖</div>
+        <div class="sector-name">प्रविधि तथा एआई</div>
+        <div class="sector-amount">रू. ५ अर्ब ९३ करोड</div>
+        <div class="sector-bar-wrap"><div class="sector-bar" style="background:linear-gradient(90deg,#EC4899,#F9A8D4)" data-width="21"></div></div>
+        <div class="sector-detail">
+          ▸ स्यूचाटारमा <strong>सावर्भौम एआई कम्प्युट केन्द्र</strong> स्थापना<br>
+          ▸ AI Processing Units खरिद — स्टार्टअपलाई सहुलियतपूर्ण कम्प्युट<br>
+          ▸ नेपाल टेलिकमको बाँकी शेयर जनस्तरमा बिक्री<br>
+          ▸ अन्तर्राष्ट्रिय AI क्षेत्रमा १५ नेपाली शोधकर्तालाई फेलोसिप<br>
+          ▸ नागरिक App मा दर्जनौँ सरकारी सेवा<br>
+          ▸ FinTech Marketplace (NRB सुपरिवेक्षण)<br>
+          ▸ रिमोट वर्कलाई कानुनी प्रबन्ध<br>
+          ▸ एकीकृत सरकारी IT सफ्टवेयर खरिद<br>
+          ▸ विज्ञान, प्रविधि तथा नवप्रवर्तन (रू. ४ अर्ब)<br>
+          ▸ पूँजीगत खर्चको न्यूनतम १% अनुसन्धान
+        </div>
+      </div>  <div class="sector-card reveal" onclick="toggleSector(this)" style="animation-delay:0.5s;border-top:3px solid #16A34A">
+        <div class="sector-icon" style="background:rgba(22,163,74,0.15)">✈️</div>
+        <div class="sector-name">पर्यटन तथा संस्कृति</div>
+        <div class="sector-amount">रू. ७ अर्ब ३४ करोड</div>
+        <div class="sector-bar-wrap"><div class="sector-bar" style="background:linear-gradient(90deg,#16A34A,#4ADE80)" data-width="26"></div></div>
+        <div class="sector-detail">
+          ▸ Visit Nepal Year 2085 तयारी<br>
+          ▸ Nepal Arogya Year 2027<br>
+          ▸ EU Air Safety List बाट हटाउन CAAN पुनःसंरचना (पुसभित्र)<br>
+          ▸ लुम्बिनी — तिलौराकोट, देवदह, कपिलवस्तु विकास (रू. ८३ करोड)<br>
+          ▸ "निर्वाण पथ" प्रवर्धन<br>
+          ▸ "शालिग्राम पथ" — त्रिवेणीधाम देखि दामोदर कुण्ड<br>
+          ▸ नागरिक उड्डयन (रू. २.९३ अर्ब)<br>
+          ▸ त्रिभुवन विमानस्थल स्तरोन्नति (रू. १.५३ अर्ब)<br>
+          ▸ ६,०००+ मिटर नामकरण नभएका हिमाल<br>
+          ▸ मुस्ताङका २०० वर्षभन्दा पुराना बौद्ध गुम्बा संरक्षण
+        </div>
+      </div>
+
+      <div class="sector-card reveal" onclick="toggleSector(this)" style="animation-delay:0.55s;border-top:3px solid #8B5CF6">
+        <div class="sector-icon" style="background:rgba(139,92,246,0.15)">🏛️</div>
+        <div class="sector-name">करनीति सुधार</div>
+        <div class="sector-amount">ऐतिहासिक कर सुधार</div>
+        <div class="sector-bar-wrap"><div class="sector-bar" style="background:linear-gradient(90deg,#8B5CF6,#C4B5FD)" data-width="80"></div></div>
+        <div class="sector-detail">
+          ▸ <strong>आयकर छुट सीमा दोब्बर: रू. १० लाख</strong><br>
+          ▸ व्यक्तिगत आयकर अधिकतम दर १०% ले घटाउने<br>
+          ▸ ३६० वस्तुमा अन्तःशुल्क खारेज<br>
+          ▸ भन्सार दर ११ तहबाट ७ तहमा<br>
+          ▸ २७३ प्रकारका कच्चा पदार्थमा भन्सार घटाउने<br>
+          ▸ Digital Payment मा VAT को १०% छुट (लटरी सहित)<br>
+          ▸ पूँजीगत लाभकर अन्तिम हुने व्यवस्था<br>
+          ▸ कर विवाद सुलह — १% थपमा विवाद फिर्ता<br>
+          ▸ हरित कर — सडक ममत्र + पूर्वाधार कर एकीकृत<br>
+          ▸ ३ वर्षमा कर परीक्षण सीमा (वर्तमान असीमित)
+        </div>
+      </div>
+
+      <div class="sector-card reveal" onclick="toggleSector(this)" style="animation-delay:0.6s;border-top:3px solid #F97316">
+        <div class="sector-icon" style="background:rgba(249,115,22,0.15)">👷</div>
+        <div class="sector-name">रोजगार तथा श्रम</div>
+        <div class="sector-amount">रू. ३ अर्ब ६३ करोड</div>
+        <div class="sector-bar-wrap"><div class="sector-bar" style="background:linear-gradient(90deg,#F97316,#FB923C)" data-width="12.8"></div></div>
+        <div class="sector-detail">
+          ▸ विप्रेषण-लगानी मिलान कोष ("Reverse Migration")<br>
+          ▸ रिटर्नी माइग्रेन्ट कार्यक्रम<br>
+          ▸ शून्य लागत वैदेशिक रोजगारी<br>
+          ▸ रेमिट्यान्स लटरी प्रोत्साहन<br>
+          ▸ नयाँ गन्तव्य मुलुकसँग श्रम सम्झौता<br>
+          ▸ श्रम न्यायाधिकरण (पुसभित्र)<br>
+          ▸ गिग वर्करलाई सामाजिक सुरक्षा<br>
+          ▸ श्रम रजिस्ट्रीमा श्रमिक र रोजगारदाता<br>
+          ▸ अनौपचारिक क्षेत्रमा सहुलियत खाना कार्यक्रम
+        </div>
+      </div>
+
+      <div class="sector-card reveal" onclick="toggleSector(this)" style="animation-delay:0.65s;border-top:3px solid #06B6D4">
+        <div class="sector-icon" style="background:rgba(6,182,212,0.15)">🌿</div>
+        <div class="sector-name">वन तथा वातावरण</div>
+        <div class="sector-amount">रू. १२ अर्ब ३१ करोड</div>
+        <div class="sector-bar-wrap"><div class="sector-bar" style="background:linear-gradient(90deg,#06B6D4,#67E8F9)" data-width="43.4"></div></div>
+        <div class="sector-detail">
+          ▸ हरित औद्योगिकीकरण, जडीबुटी प्रशोधन<br>
+          ▸ REDD+ कार्यक्रम — कार्बन उत्सर्जन कटौती<br>
+          ▸ जलवायु कोषमा निजी क्षेत्रको पहुँच<br>
+          ▸ ड्रोन तथा स्याटेलाइटबाट डढेलो नियन्त्रण<br>
+          ▸ वायु प्रदूषण मापन केन्द्र<br>
+          ▸ चुरे तथा तराईमा पानी स्रोत संरक्षण<br>
+          ▸ वन पैदावार — डिजिटल एकद्वार प्रणाली<br>
+          ▸ सामुदायिक वन उपभोक्तालाई थप स्वायत्तता<br>
+          ▸ काठ उद्योगको प्रतिस्पर्धात्मक क्षमता<br>
+          ▸ कर्णालीमा जडीबुटी प्रशोधन केन्द्र
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- REVENUE SECTION -->
+<section class="section revenue-bg" id="revenue">
+  <div class="section-inner">
+    <div class="section-tag">राजस्व प्रक्षेपण</div>
+    <h2 class="section-title">राजस्व नीति तथा कार्यक्रम</h2>
+    <p class="section-desc">आर्थिक वर्ष २०८३/८४ को राजस्व अनुमान र स्रोत।</p>
+
+    <div class="revenue-grid reveal">
+      <div>
+        <div style="margin-bottom:2rem">
+          <div style="font-family:'Eczar',serif;font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:1.2rem">राजस्व शीर्षकगत अनुमान (रू. अर्बमा)</div>
+          <div class="bar-chart-wrap">
+            <div class="bar-item">
+              <div class="bar-label">कुल कर राजस्व<span>१,४०३ अर्ब</span></div>
+              <div class="bar-track"><div class="bar-fill" style="background:linear-gradient(90deg,#C41E3A,#FF6B6B)" data-width="100"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">मूल्य अभिवृद्धि कर<span>३८८ अर्ब</span></div>
+              <div class="bar-track"><div class="bar-fill" style="background:linear-gradient(90deg,#D4AF37,#FDD835)" data-width="27.7"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">भन्सार महसुल<span>२८७ अर्ब</span></div>
+              <div class="bar-track"><div class="bar-fill" style="background:linear-gradient(90deg,#00B4D8,#48CAE4)" data-width="20.4"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">अन्तःशुल्क<span>२५५ अर्ब</span></div>
+              <div class="bar-track"><div class="bar-fill" style="background:linear-gradient(90deg,#7B2D8B,#C084FC)" data-width="18.2"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">आयकर (व्यक्तिगत+कर्पोरेट)<span>३७२ अर्ब</span></div>
+              <div class="bar-track"><div class="bar-fill" style="background:linear-gradient(90deg,#2D9B6F,#52D68A)" data-width="26.5"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">गैरकर राजस्व<span>१७७ अर्ब</span></div>
+              <div class="bar-track"><div class="bar-fill" style="background:linear-gradient(90deg,#F4A62A,#FDD835)" data-width="12.6"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">वैदेशिक अनुदान<span>६१.७४ अर्ब</span></div>
+              <div class="bar-track"><div class="bar-fill" style="background:linear-gradient(90deg,#EC4899,#F9A8D4)" data-width="4.4"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key targets rings -->
+        <div style="font-family:'Eczar',serif;font-size:1rem;font-weight:700;color:var(--white);margin-bottom:1rem">आर्थिक सूचकांक लक्ष्य</div>
+        <div class="ring-grid">
+          <div class="ring-item">
+            <svg class="ring-svg" viewBox="0 0 120 120">
+              <circle class="ring-bg" cx="60" cy="60" r="50"/>
+              <circle class="ring-fg" cx="60" cy="60" r="50" stroke="#C41E3A" stroke-dasharray="314.16" stroke-dashoffset="314.16" data-pct="70"/>
+            </svg>
+            <div class="ring-pct">७%</div>
+            <div class="ring-label">आर्थिक वृद्धि दर</div>
+          </div>
+          <div class="ring-item">
+            <svg class="ring-svg" viewBox="0 0 120 120">
+              <circle class="ring-bg" cx="60" cy="60" r="50"/>
+              <circle class="ring-fg" cx="60" cy="60" r="50" stroke="#D4AF37" stroke-dasharray="314.16" stroke-dashoffset="314.16" data-pct="60"/>
+            </svg>
+            <div class="ring-pct">६%</div>
+            <div class="ring-label">मूल्य वृद्धि सीमा</div>
+          </div>
+          <div class="ring-item">
+            <svg class="ring-svg" viewBox="0 0 120 120">
+              <circle class="ring-bg" cx="60" cy="60" r="50"/>
+              <circle class="ring-fg" cx="60" cy="60" r="50" stroke="#00B4D8" stroke-dasharray="314.16" stroke-dashoffset="314.16" data-pct="90"/>
+            </svg>
+            <div class="ring-pct">९०%</div>
+            <div class="ring-label">स्वास्थ्य बीमा ३ वर्षमा</div>
+          </div>
+          <div class="ring-item">
+            <svg class="ring-svg" viewBox="0 0 120 120">
+              <circle class="ring-bg" cx="60" cy="60" r="50"/>
+              <circle class="ring-fg" cx="60" cy="60" r="50" stroke="#2D9B6F" stroke-dasharray="314.16" stroke-dashoffset="314.16" data-pct="64"/>
+            </svg>
+            <div class="ring-pct">६४%</div>
+            <div class="ring-label">सिँचित जमिन अनुपात</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fiscal table -->
+      <div>
+        <div class="fiscal-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>विवरण</th>
+                <th style="text-align:right">२०८२/८३<br><small>(संशोधित)</small></th>
+                <th style="text-align:right">२०८३/८४<br><small>(लक्ष्य)</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="td-label">कुल खर्च</td><td class="td-num">१३,६६४</td><td class="td-num" style="color:#2D9B6F">२१,२४३</td></tr>
+              <tr><td class="td-label">चालु खर्च</td><td class="td-num">७,१२३</td><td class="td-num">१२,७०६</td></tr>
+              <tr><td class="td-label">पूँजीगत खर्च</td><td class="td-num">२,५१४</td><td class="td-num">४,३११</td></tr>
+              <tr><td class="td-label">वित्तीय व्यवस्था</td><td class="td-num">४,०२८</td><td class="td-num">४,२२६</td></tr>
+              <tr><td class="td-label">कुल राजस्व</td><td class="td-num">१३,००२</td><td class="td-num" style="color:#D4AF37">१५,८०३</td></tr>
+              <tr><td class="td-label">कर राजस्व</td><td class="td-num">११,७१६</td><td class="td-num">१४,०३३</td></tr>
+              <tr><td class="td-label">गैरकर राजस्व</td><td class="td-num">१,२२५</td><td class="td-num">१,७७०</td></tr>
+              <tr><td class="td-label">वैदेशिक अनुदान</td><td class="td-num">३,१००</td><td class="td-num">६,१७५</td></tr>
+              <tr><td class="td-label">आन्तरिक ऋण (खुद)</td><td class="td-num">—</td><td class="td-num">१,६४१</td></tr>
+              <tr><td class="td-label">वैदेशिक ऋण</td><td class="td-num">—</td><td class="td-num">२,४७३</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:0.7rem;color:var(--text-muted);margin-top:0.8rem;font-family:'Poppins',sans-serif">* रू. करोडमा। स्रोत: अनुसूची-१, बजेट वक्तव्य २०८३/८४</p>
+
+        <!-- Debt status -->
+        <div style="margin-top:1.5rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:12px;padding:1.2rem;">
+          <div style="font-family:'Eczar',serif;font-size:1rem;font-weight:700;color:var(--white);margin-bottom:1rem">सार्वजनिक ऋणको अवस्था (रू. करोडमा)</div>
+          <div class="compare-row">
+            <span class="compare-label" style="min-width:130px">आन्तरिक ऋण</span>
+            <div class="compare-track"><div class="compare-fill" style="background:linear-gradient(90deg,#C41E3A,#FF6B6B)" data-width="70"></div></div>
+            <span class="compare-val">१,५४,३७४</span>
+          </div>
+          <div class="compare-row">
+            <span class="compare-label" style="min-width:130px">वैदेशिक ऋण</span>
+            <div class="compare-track"><div class="compare-fill" style="background:linear-gradient(90deg,#4A90D9,#7EC8E3)" data-width="100"></div></div>
+            <span class="compare-val">१,८२,५०२</span>
+          </div>
+          <div style="margin-top:0.8rem;font-size:0.75rem;color:var(--text-muted)">* २०८३/८४ अन्त्यमा अनुमानित मौज्दात</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTES -->
+<div class="quote-section">
+  <div class="quote-inner">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">यो बजेट राज्य सञ्चालनको नयाँ सोच र संकल्प, आर्थिक रूपान्तरणको स्पष्ट मार्गचित्र र नागरिकसँग गरिएको राजनीतिक करार कार्यान्वयनको प्रारम्भ-बिन्दु हो।</p>
+    <div class="footer-divider"></div>
+    <p class="quote-attr">— डा. स्वर्णिम वाग्ले, अर्थमन्त्री</p>
+  </div>
+</div>
+
+<!-- REFORMS TIMELINE -->
+<section class="section reforms-bg" id="reforms">
+  <div class="section-inner">
+    <div class="section-tag">संस्थागत सुधार</div>
+    <h2 class="section-title">प्रमुख नीतिगत सुधारहरू</h2>
+    <p class="section-desc">बजेट २०८३/८४ मा घोषित तत्काल कार्यान्वयनयोग्य सुधारहरू।</p>
+
+    <div class="timeline reveal">
+
+      <div class="tl-item" style="animation-delay:0.1s">
+        <div class="tl-dot" style="background:#C41E3A;box-shadow:0 0 10px #C41E3A"></div>
+        <div class="tl-category">करनीति</div>
+        <div class="tl-title">आयकर छुट सीमा दोब्बर — रू. १० लाख</div>
+        <div class="tl-desc">व्यक्तिगत आयकरको अधिकतम दर १०% ले घटाउने। मध्यमवर्गको खर्च सामर्थ्य अभिवृद्धि।</div>
+      </div>
+
+      <div class="tl-item" style="animation-delay:0.2s">
+        <div class="tl-dot" style="background:#D4AF37;box-shadow:0 0 10px #D4AF37"></div>
+        <div class="tl-category">सरकारी संरचना</div>
+        <div class="tl-title">सरकारी संस्था पुनःसंरचना — रू. २० अर्ब बचत</div>
+        <div class="tl-desc">३१ निकाय खारेजी, ६ मर्जर, ६ हस्तान्तरण, १८ को पुनःसंरचना। मन्त्रालय २२ बाट १८ मा आइसकेको।</div>
+      </div>
+
+      <div class="tl-item" style="animation-delay:0.3s">
+        <div class="tl-dot" style="background:#00B4D8;box-shadow:0 0 10px #00B4D8"></div>
+        <div class="tl-category">कर्मचारी</div>
+        <div class="tl-title">सरकारी कर्मचारीको तलब — खुद २१% वृद्धि</div>
+        <div class="tl-desc">शुरु स्केलमा १०% तलब वृद्धि + १०% कार्यसम्पादन भत्ता। न्यूनतम रू. ४०,०००, अधिकतम रू. १ लाखसम्म। साउन १ देखि लागू।</div>
+      </div>
+
+      <div class="tl-item" style="animation-delay:0.4s">
+        <div class="tl-dot" style="background:#2D9B6F;box-shadow:0 0 10px #2D9B6F"></div>
+        <div class="tl-category">लगानी वातावरण</div>
+        <div class="tl-title">लगानी एक्सप्रेस — स्वचालित रुट प्रणाली</div>
+        <div class="tl-desc">३ महिनाभित्र स्वचालित। कम्पनी दर्ता, कर, भिसा, वित्तीय सेवा एकद्वारबाट। लगानी बोर्डको स्वीकृतिपछि अन्य निकायबाट स्वीकृति नचाहिने।</div>
+      </div>
+  <div class="tl-item" style="animation-delay:0.5s">
+        <div class="tl-dot" style="background:#7B2D8B;box-shadow:0 0 10px #7B2D8B"></div>
+        <div class="tl-category">वित्तीय उपकरण</div>
+        <div class="tl-title">अन्तर्राष्ट्रिय बजारमा नेपाली मुद्रा Offshore Bond</div>
+        <div class="tl-desc">स्वच्छ ऊर्जा बण्ड, डायस्पोरा बण्ड जारी। सोभरेन वेल्थ फण्ड गठन। एआई फ्याक्ट्री लगायतमा "मातृभूमि कोष" स्थापना।</div>
+      </div>
+
+      <div class="tl-item" style="animation-delay:0.6s">
+        <div class="tl-dot" style="background:#F4A62A;box-shadow:0 0 10px #F4A62A"></div>
+        <div class="tl-category">सामाजिक सुरक्षा</div>
+        <div class="tl-title">दलित बालबालिकाको बालपोषण भत्ता दोब्बर</div>
+        <div class="tl-desc">मासिक रू. १,००० (वर्तमान रू. ५००)। "सक्नेले छोडौँ, नसक्नेलाई जोडौँ" — स्वेच्छिक सामाजिक सुरक्षा त्याग अभियान।</div>
+      </div>
+
+      <div class="tl-item" style="animation-delay:0.7s">
+        <div class="tl-dot" style="background:#EC4899;box-shadow:0 0 10px #EC4899"></div>
+        <div class="tl-category">पूँजी बजार</div>
+        <div class="tl-title">NEPSE पुनःसंरचना — इन्ट्राडे, सर्ट सेलिङ, डेरिभेटिभ</div>
+        <div class="tl-desc">Global Depository Receipt जारी व्यवस्था। शेयर कर्नरिङ, इन्साइडर ट्रेडिङ विरुद्ध शून्य सहनशीलता। NRB मार्फत FinTech Marketplace।</div>
+      </div>
+
+      <div class="tl-item" style="animation-delay:0.8s">
+        <div class="tl-dot" style="background:#0EA5E9;box-shadow:0 0 10px #0EA5E9"></div>
+        <div class="tl-category">राष्ट्रिय स्तरोन्नति</div>
+        <div class="tl-title">LDC स्तर — थप २ वर्ष Graduation स्थगन</div>
+        <div class="tl-desc">अतिकम विकसित मुलुकको राष्ट्रसंघीय दर्जाबाट निस्कन थप २ वर्ष — घनीभूत आर्थिक-सामाजिक पुनर्जागरणको आडमा अप्रतिगम्य स्तरोन्नतिका लागि।</div>
+      </div>
+
+      <div class="tl-item" style="animation-delay:0.9s">
+        <div class="tl-dot" style="background:#16A34A;box-shadow:0 0 10px #16A34A"></div>
+        <div class="tl-category">ग्रे-लिस्ट</div>
+        <div class="tl-title">FATF ग्रे-लिस्टबाट यथाशक्य छिटो हटाउने</div>
+        <div class="tl-desc">सम्पत्ति शुद्धीकरण सम्बन्धी सुधार। पहिलो र दोस्रो Sovereign Credit Rating सुधार। हेजिङ सेवा प्रारम्भ।</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS TABS -->
+<section class="section highlights-bg" id="highlights">
+  <div class="section-inner">
+    <div class="section-tag">मुख्य कार्यक्रम</div>
+    <h2 class="section-title">विस्तृत कार्यक्रम</h2>
+    <p class="section-desc">थीमगत रूपमा वर्गीकरण गरिएका प्रमुख बजेट कार्यक्रमहरू।</p>
+
+    <div class="highlight-tabs">
+      <button class="tab-btn active" onclick="showTab('growth')">आर्थिक वृद्धि</button>
+      <button class="tab-btn" onclick="showTab('infra')">पूर्वाधार</button>
+      <button class="tab-btn" onclick="showTab('social')">सामाजिक क्षेत्र</button>
+      <button class="tab-btn" onclick="showTab('digital')">डिजिटल नेपाल</button>
+      <button class="tab-btn" onclick="showTab('governance')">सुशासन</button>
+      <button class="tab-btn" onclick="showTab('regional')">क्षेत्रीय विकास</button>
+    </div>
+
+    <!-- GROWTH -->
+    <div class="tab-content active" id="tab-growth">
+      <div class="highlights-list">
+        <div class="highlight-card"><div class="hc-icon">🏭</div><div class="hc-body"><div class="hc-title">मोतिपुर र मयूरद्वार औद्योगिक क्षेत्र निजी क्षेत्रले निर्माण र सञ्चालन</div><div class="hc-detail">पाँचखाल विशेष आर्थिक क्षेत्रमा महिला उद्यमीलाई प्राथमिकता</div><div class="hc-amount">रू. ६५ करोड औद्योगिक पूर्वाधार</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">💡</div><div class="hc-body"><div class="hc-title">विद्युतीय बोइलर रूपान्तरण — १०० उद्योग</div><div class="hc-detail">परम्परागत बोइलरलाई इलेक्ट्रिक वा बायो-ब्रिकेटमा परिवर्तन सहुलियतपूर्ण ऋण</div><div class="hc-amount">रू. २२ करोड</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🚀</div><div class="hc-body"><div class="hc-title">स्टार्टअप इकोसिस्टम — Nepal Enterprise Facility</div><div class="hc-detail">नवउद्यमलाई अनुदान→ सहुलियत ऋण → वृद्धि पूँजी। NRN को सह-लगानी प्रोत्साहन।</div><div class="hc-amount">रू. ५० करोड (NEF) + रू. ४ अर्ब विज्ञान, प्रविधि</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🏦</div><div class="hc-body"><div class="hc-title">राष्ट्रिय सम्पत्ति व्यवस्थापन कम्पनी — Bad Bank</div><div class="hc-detail">बढ्दो खराब कर्जा व्यवस्थापनका लागि विशेष कानुनी अधिकारसहित पुसमसान्तसम्म स्थापना।</div><div class="hc-amount">बैंकिङ क्षेत्र सुधार</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">📈</div><div class="hc-body"><div class="hc-title">व्यावसायिक पुनरुत्थान कर्जा (Revival Loan)</div><div class="hc-detail">पूँजी अभावका कारण पूर्ण क्षमतामा सञ्चालन नभएका उद्योगलाई।</div><div class="hc-amount">निजी क्षेत्र प्रोत्साहन</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">💎</div><div class="hc-body"><div class="hc-title">दैलेखको पेट्रोलियम व्यावसायिक उत्पादन</div><div class="hc-detail">धौवादी फलाम उद्योगमा सरकारी शेयर घटाई PPP मोडलमा सञ्चालन।</div><div class="hc-amount">खनन उद्योग</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🌊</div><div class="hc-body"><div class="hc-title">गोरखकाली रबर सहित ७ सार्वजनिक संस्थानमा DDA</div><div class="hc-detail">PPP मोडलमा लगानी व्यवस्थापन यस वर्षभित्र सम्पन्न। राष्ट्रिय जीवन बीमा र विशाल बजार IPO।</div><div class="hc-amount">सार्वजनिक संस्थान सुधार</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🎬</div><div class="hc-body"><div class="hc-title">महानगरपालिका बाहेक नयाँ चलचित्र हल</div><div class="hc-detail">पहिलो १० वर्ष आयकर पूर्ण छुट — सांस्कृतिक उद्योग प्रवर्धन।</div><div class="hc-amount">कर सहुलियत</div></div></div>
+      </div>
+    </div>
+
+    <!-- INFRA -->
+    <div class="tab-content" id="tab-infra">
+      <div class="highlights-list">
+        <div class="highlight-card"><div class="hc-icon">🚂</div><div class="hc-body"><div class="hc-title">बर्दिबासदेखि काठमाडौँ-तराई रुटमार्ग रेलमार्ग</div><div class="hc-detail">बर्दिबास-विराटनगर, जनकपुर-जयनगर रेलमार्गको बाँकी कार्य सम्पन्न।</div><div class="hc-amount">रेल विस्तार</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🌉</div><div class="hc-body"><div class="hc-title">काठमाडौँ रिंगरोड विस्तार — कलंकी-बसन्तपुर</div><div class="hc-detail">बसन्तपुर-चाबहिल-कोटेश्वर खण्डको डिजाइन सम्पन्न। स्मार्ट अर्बन मोबिलिटी — इलेक्ट्रिक बस।</div><div class="hc-amount">काठमाडौँ र पोखरामा इ-बस</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🏘️</div><div class="hc-body"><div class="hc-title">मेचीनगरमा १०० आवासीय भवन (राष्ट्रिय आवास कम्पनी)</div><div class="hc-detail">सर्वसाधारणलाई वित्त वितरण — सस्तो आवास कार्यक्रम।</div><div class="hc-amount">आवास क्षेत्र</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">✈️</div><div class="hc-body"><div class="hc-title">गौतमबुद्ध र पोखरा विमानस्थल व्यवस्थापन</div><div class="hc-detail">निजी क्षेत्रसँग सहकार्य। निजगढको मोडालिटी ६ महिनाभित्र यकिन।</div><div class="hc-amount">रू. १.५३ अर्ब (TIA)</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🔌</div><div class="hc-body"><div class="hc-title">भारत-नेपाल अन्तरदेशीय प्रसारण लाइन</div><div class="hc-detail">वटुवल-गोरखपुर, इनरुवा-पूर्णिया। धल्केवर-मुजफ्फरपुर-सीतामढी, लमही-लखनउ निर्माण सुरु।</div><div class="hc-amount">विद्युत निर्यात विस्तार</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🗺️</div><div class="hc-body"><div class="hc-title">Vision Kathmandu 2040</div><div class="hc-detail">अन्डरपास, फ्लाइओभर, नदी कोरिडोर, पार्क, फोहोर व्यवस्थापन, युटिलिटी डक्ट एकीकृत।</div><div class="hc-amount">एकीकृत उपत्यका पूर्वाधार</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">💧</div><div class="hc-body"><div class="hc-title">खानेपानी — ५ वर्षमा २४/७ सेवा</div><div class="hc-detail">स्मार्ट वितरण प्रणाली। काठमाडौँ खानेपानी बोर्ड एकीकृत संरचना।</div><div class="hc-amount">रू. ३७.१७ अर्ब</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🛡️</div><div class="hc-body"><div class="hc-title">जलवायु अनुकूलित संरचना — राजमार्गमा</div><div class="hc-detail">उच्च जोखिमयुक्त स्थानमा विशेष संरचना। पहिरो नियन्त्रण (रू. ३.१७ अर्ब)।</div><div class="hc-amount">आपदा जोखिम न्यूनीकरण</div></div></div>
+      </div>
+    </div>
+
+    <!-- SOCIAL -->
+    <div class="tab-content" id="tab-social">
+      <div class="highlights-list">
+        <div class="highlight-card"><div class="hc-icon">👩‍⚕️</div><div class="hc-body"><div class="hc-title">स्वास्थ्य बीमा — एकल भुक्तानी विधि</div><div class="hc-detail">छरिएका सामाजिक स्वास्थ्य सुरक्षा कार्यक्रम एकीकृत। ३ वर्षमा ९०% जनसंख्या।</div><div class="hc-amount">रू. १५ अर्ब</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🧒</div><div class="hc-body"><div class="hc-title">दलित बालपोषण भत्ता — मासिक रू. १,०००</div><div class="hc-detail">वर्तमान रू. ५०० बाट दोब्बर। मधेश, कर्णाली, सुदूरपश्चिमका २५ जिल्लाका बालबालिकालाई निरन्तरता।</div><div class="hc-amount">रू. ३ अर्ब</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🎓</div><div class="hc-body"><div class="hc-title">विद्यालय-केन्द्रित शिक्षा प्रणाली</div><div class="hc-detail">अभिभावकीय सहयोग स्वीकार। "सफा शौचालय अभियान" सम्पूर्ण विद्यालय। आवासीय विद्यालय (चेपाङ समुदायबाट)।</div><div class="hc-amount">रू. २१८.३ अर्ब</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🧑‍🦽</div><div class="hc-body"><div class="hc-title">अपाङ्गता पुनःस्थापना केन्द्र — ७ प्रदेश</div><div class="hc-detail">अटिज्म भएका बालबालिकाका लागि आवासीय नमूना विद्यालय। सरकारी संरचनामा पहुँचयोग्यता।</div><div class="hc-amount">सामाजिक समावेशिता</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">⚖️</div><div class="hc-body"><div class="hc-title">लैंगिक हिंसा निवारण — एकीकृत विधेयक</div><div class="hc-detail">बालश्रम, छाउपडी, मासिकधर्म विभेद, बालविवाह विरुद्ध सामाजिक रूपान्तरण अभियान। नेपाललाई सडक बालबालिकामुक्त राष्ट्र।</div><div class="hc-amount">रू. २.२७ अर्ब महिला क्षेत्र</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🏋️</div><div class="hc-body"><div class="hc-title">अन्तर्राष्ट्रिय पदक विजेता खेलाडी</div><div class="hc-detail">अवकाशपछि आजीवन निःशुल्क स्वास्थ्य उपचार। दशौँ राष्ट्रिय खेलकुद सुखेतमा, एघारौँ मधेश प्रदेशमा।</div><div class="hc-amount">रू. ४.०३ अर्ब खेलकुद</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🌐</div><div class="hc-body"><div class="hc-title">गैर-आवासीय नेपाली — एक पटकको नेपाली, सदैको नेपाली</div><div class="hc-detail">NRN नागरिकतामा समसामयिक संशोधन। आर्थिक, सामाजिक, सांस्कृतिक अधिकार। प्रवासीको मतअधिकार तयारी।</div><div class="hc-amount">सौम्य शक्ति विस्तार</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🩺</div><div class="hc-body"><div class="hc-title">आयुर्वेद र प्राकृतिक चिकित्सा</div><div class="hc-detail">राष्ट्रिय आयुर्वेद पञ्चकर्म केन्द्र, बुद्धनीलकण्ठ; कीर्तिपुर र पोखरामा आयुर्वेद अस्पताल — स्वास्थ्य पर्यटनसँग जोड्ने।</div><div class="hc-amount">स्वास्थ्य पर्यटन</div></div></div>
+      </div>
+    </div>
+
+    <!-- DIGITAL -->
+    <div class="tab-content" id="tab-digital">
+      <div class="highlights-list">
+        <div class="highlight-card"><div class="hc-icon">🧠</div><div class="hc-body"><div class="hc-title">सावर्भौम एआई कम्प्युट केन्द्र — स्यूचाटार, काठमाडौँ</div><div class="hc-detail">हजारौँ AI Processing Units। उद्यमी र स्टार्टअपलाई सहुलियतपूर्ण कम्प्युट। स्वच्छ जलविद्युतलाई AI सेवामा रूपान्तरण।</div><div class="hc-amount">डिजिटल रूपान्तरण</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">📡</div><div class="hc-body"><div class="hc-title">नेपाल टेलिकम शेयर — "टेकहब" फण्ड</div><div class="hc-detail">सरकारको ६६% शेयर राखी बाँकी जनस्तरमा बिक्री। प्राप्त रकम नेपाललाई Tech Hub बनाउन।</div><div class="hc-amount">ICT विस्तार</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">💳</div><div class="hc-body"><div class="hc-title">Digital Payment मा VAT को १०% छुट</div><div class="hc-detail">बीजक जारी हुँदा नै छुट स्वचालित। VAT फिर्ता प्रणाली स्वचालित। लटरी कार्यक्रम सुरु।</div><div class="hc-amount">डिजिटल अर्थतन्त्र</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🏗️</div><div class="hc-body"><div class="hc-title">Peer-to-Peer (P2P) लेनदेन नियमन</div><div class="hc-detail">व्यक्तिगत Credit Scoring प्रणाली लागू। कृषि, उद्योग, पर्यटन, जलविद्युतमा दीर्घकालीन स्थिर ब्याजदर कर्जा।</div><div class="hc-amount">वित्तीय नवप्रवर्तन</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🔐</div><div class="hc-body"><div class="hc-title">राष्ट्रिय परिचयपत्र — डिजिटल सेवा एकद्वार</div><div class="hc-detail">मालपोत, यातायात, राहदानी, घटना दर्ता, सामाजिक सुरक्षा — एकै परिचयपत्रबाट। डिजिटल टाइमकार्ड।</div><div class="hc-amount">सुशासन</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🌍</div><div class="hc-body"><div class="hc-title">रिमोट वर्क — कानुनी प्रबन्ध</div><div class="hc-detail">नेपालमा बसेर विदेशी रोजगारदाताका लागि काम गर्न पाउने। IT सेवाको निर्यातबाट आर्जित आयमा ५०% कर छुट।</div><div class="hc-amount">Digital Export</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">📊</div><div class="hc-body"><div class="hc-title">एआई-आधारित कर परीक्षण प्रणाली</div><div class="hc-detail">E-Assessment पद्धति। Paperless, Faceless, Contactless राजस्व प्रशासन। केन्द्रीय बीजक अनुगमन (रू. १ करोडभन्दा माथि)।</div><div class="hc-amount">राजस्व आधुनिकीकरण</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🎯</div><div class="hc-body"><div class="hc-title">Digital Excise Ticket प्रणाली</div><div class="hc-detail">अन्तःशुल्क चुहावट नियन्त्रण। Electronic Track & Trace। स्वयं निष्कासन प्रणालीमा रूपान्तरण।</div><div class="hc-amount">अन्तःशुल्क सुधार</div></div></div>
+      </div>
+    </div>
+
+    <!-- GOVERNANCE -->
+    <div class="tab-content" id="tab-governance">
+      <div class="highlights-list">
+        <div class="highlight-card"><div class="hc-icon">⚖️</div><div class="hc-body"><div class="hc-title">स्वार्थको द्वन्द्व — कानुन तर्जुमा</div><div class="hc-detail">नीतिगत भ्रष्टाचार अन्त्य। कसूरजन्य सम्पत्ति एकीकृत सूचना प्रणाली।</div><div class="hc-amount">सुशासन सुधार</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🏦</div><div class="hc-body"><div class="hc-title">राष्ट्रिय वाणिज्य बैंक — सरकारी पूँजी वृद्धि</div><div class="hc-detail">नेपाल वायुसेवा निगमलाई कम्पनीमा रूपान्तरण, व्यवस्थापन सुधार र रणनीतिक साझेदारी।</div><div class="hc-amount">सार्वजनिक संस्थान</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🌐</div><div class="hc-body"><div class="hc-title">दूतावास खारेजी — डेनमार्क, ब्राजिल, दक्षिण अफ्रिका</div><div class="hc-detail">चेङ्दु, सानफ्रान्सिस्को महावाणिज्यदूतावास र विशाखापट्टनम दूतावास शाखा पनि खारेज। आर्थिक कूटनीति सुदृढ।</div><div class="hc-amount">परराष्ट्र व्यवस्थापन</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🔒</div><div class="hc-body"><div class="hc-title">शान्ति प्रक्रिया — संक्रमणकालीन न्याय</div><div class="hc-detail">बाँकी काम यथाशीघ्र निष्कर्षमा। राष्ट्रिय सुरक्षा नीति, २०७५ को पुनरावलोकन।</div><div class="hc-amount">राजनीतिक स्थिरता</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🏛️</div><div class="hc-body"><div class="hc-title">विद्युतीय अदालत व्यवस्थापन प्रणाली</div><div class="hc-detail">विपन्न र दूर दराजका नागरिकलाई निःशुल्क कानुनी सहायता। व्यापारिक विवाद न्यायाधिकरण।</div><div class="hc-amount">न्याय सुधार</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🏙️</div><div class="hc-body"><div class="hc-title">सशस्त्र प्रहरी — सीमा सुरक्षाको डेडिकेटेड फोर्स</div><div class="hc-detail">प्रहरी अनुसन्धानमा AI, विधि विज्ञान प्रयोगशाला। कारागार — खुला कारागार अवधारणा।</div><div class="hc-amount">रू. २ अर्ब सेना आवास</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">📋</div><div class="hc-body"><div class="hc-title">राजनीतिक दललाई सरकारी अनुदान — वहस</div><div class="hc-detail">पछिल्लो आम निर्वाचनमा प्राप्त मतको आधारमा। महालेखापरीक्षकबाट लेखापरीक्षण।</div><div class="hc-amount">पारदर्शिता</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🤝</div><div class="hc-body"><div class="hc-title">हेलो सरकार — सरकार-नागरिक संवाद Platform</div><div class="hc-detail">डिजिटल टाइमकार्ड लागू। नागरिक App मा सरकारी सेवा। प्रमाणमा आधारित नीति निर्माण।</div><div class="hc-amount">नागरिक सेवा</div></div></div>
+      </div>
+    </div>
+
+    <!-- REGIONAL -->
+    <div class="tab-content" id="tab-regional">
+      <div class="highlights-list">
+        <div class="highlight-card"><div class="hc-icon">🌾</div><div class="hc-body"><div class="hc-title">मध्य-मधेश चतुर्भुज (Quadrangle)</div><div class="hc-detail">सुनकोशी मरिन (१,२२,०००+ हेक्टर), हुलाकी राजमार्ग विस्तार — कृषि र उद्योगको केन्द्र।</div><div class="hc-amount">मधेश विकास</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🏔️</div><div class="hc-body"><div class="hc-title">कर्णाली चतुर्भुज</div><div class="hc-detail">मध्यपहाडी, कर्णाली राजमार्ग, भेरी कोरिडोर — जडीबुटी, जलविद्युत, पर्यटन, खनिज।</div><div class="hc-amount">कर्णाली विकास</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">⛩️</div><div class="hc-body"><div class="hc-title">गण्डकी चतुर्भुज — "शालिग्राम पथ"</div><div class="hc-detail">त्रिवेणीधाम, देवघाट, रुरुक्षेत्र (ऋडी), कागबेनी, मुक्तिनाथ, दामोदर कुण्ड एकीकृत।</div><div class="hc-amount">तीर्थाटन विकास</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🦋</div><div class="hc-body"><div class="hc-title">कोशी कोरिडोर — जैविक विविधता</div><div class="hc-detail">कोशीटप्पुदेखि कञ्चनजंघासम्म। स्वच्छ ऊर्जा विकास केन्द्रित। उत्तरी पदयात्रा मार्ग जोड्ने।</div><div class="hc-amount">पूर्व नेपाल</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🌸</div><div class="hc-body"><div class="hc-title">सुदूरपश्चिम "पर्यटकीय चतुर्दिक"</div><div class="hc-detail">रामारोशन, खप्तड, बडीमालिका, शैलेश्वरी, उग्रतारा, मल्लिकार्जुन क्षेत्र।</div><div class="hc-amount">पर्यटन विकास</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">☮️</div><div class="hc-body"><div class="hc-title">"निर्वाण पथ" — लुम्बिनी-मुक्तिनाथ</div><div class="hc-detail">ध्यान, साधना, योग, बौद्ध-वैदिक दर्शन। मनाङ, मुस्ताङ, म्याग्दीको हिमाली संस्कृति एकीकृत।</div><div class="hc-amount">धार्मिक पर्यटन</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🏕️</div><div class="hc-body"><div class="hc-title">डाँफे रुट (Great Himalayan Trail)</div><div class="hc-detail">खप्तड-रामारोशन-बडीमालिका-बुद्धिनन्दा-रारा-स्वर्गद्धारी-मुक्तिनाथ जोड्ने उच्च पदमार्ग।</div><div class="hc-amount">एडभेञ्चर पर्यटन</div></div></div>
+        <div class="highlight-card"><div class="hc-icon">🚵</div><div class="hc-body"><div class="hc-title">साइकल ट्रेल — गण्डकी प्रदेश (परीक्षण)</div><div class="hc-detail">कास्की लिपेनी-विम्सीकोट-भाचोक-लम्तरी र ब्यास-छाब्दी-बन्दीपुर-देवघाट रुट।</div><div class="hc-amount">साइकल पर्यटन</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-title">बजेट वक्तव्य आर्थिक वर्ष २०८३/८४</div>
+  <div class="footer-sub">नेपाल सरकार · अर्थ मन्त्रालय · २०८३ जेठ १५</div>
+  <div class="footer-divider"></div>
+  <p class="footer-note">स्रोत: अर्थ मन्त्रालय, नेपाल सरकार (www.mof.gov.np) | यो पृष्ठ सूचनामूलक उद्देश्यका लागि मात्र</p>
+</footer>
+
+<script>
+// ──── NAV SHOW ON SCROLL ────
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('mainNav');
+  nav.classList.toggle('visible', window.scrollY > 200);
+});
+
+// ──── DONUT CHART ────
+function animateDonut() {
+  const circ = 2 * Math.PI * 80; // 502.65
+  const data = [
+    { pct: 59.8, color: '#C41E3A', id: 'seg1' },
+    { pct: 20.3, color: '#D4AF37', id: 'seg2' },
+    { pct: 19.9, color: '#00B4D8', id: 'seg3' }
+  ];
+  let offset = 0;
+  data.forEach(d => {
+    const seg = document.getElementById(d.id);
+    const len = (d.pct / 100) * circ;
+    const gap = circ - len;
+    seg.style.strokeDasharray = `0 ${circ}`;
+    seg.style.strokeDashoffset = -offset;
+    setTimeout(() => {
+      seg.style.transition = 'stroke-dasharray 1.5s cubic-bezier(0.25,0.46,0.45,0.94)';
+      seg.style.strokeDasharray = `${len} ${gap}`;
+    }, 300);
+    offset += len;
+  });
+}
+
+// ──── REVEAL ON SCROLL ────
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      // Animate bars inside
+      entry.target.querySelectorAll('.bar-fill, .compare-fill, .sector-bar').forEach(bar => {
+        const w = bar.dataset.width || 0;
+        bar.style.width = w + '%';
+      });
+      // Animate rings
+      entry.target.querySelectorAll('.ring-fg').forEach(ring => {
+        const pct = parseFloat(ring.dataset.pct) || 0;
+        const circ = 2 * Math.PI * 50;
+        const offset = circ - (pct / 100) * circ;
+        setTimeout(() => {
+          ring.style.transition = 'stroke-dashoffset 2s cubic-bezier(0.25,0.46,0.45,0.94)';
+          ring.style.strokeDashoffset = offset;
+        }, 200);
+      });
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Also trigger bars/rings not inside .reveal
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      if (el.dataset.width) el.style.width = el.dataset.width + '%';
+      if (el.dataset.pct) {
+        const pct = parseFloat(el.dataset.pct);
+        const circ = 2 * Math.PI * 50;
+        const offset = circ - (pct / 100) * circ;
+        setTimeout(() => {
+          el.style.transition = 'stroke-dashoffset 2s ease';
+          el.style.strokeDashoffset = offset;
+        }, 300);
+      }
+      barObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.bar-fill, .compare-fill, .sector-bar, .ring-fg').forEach(el => barObserver.observe(el));
+
+// ──── DONUT TRIGGER ────
+const donutObs = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting) { animateDonut(); donutObs.disconnect(); }
+}, { threshold: 0.3 });
+const donutEl = document.querySelector('.donut-container');
+if (donutEl) donutObs.observe(donutEl);
+
+// ──── TABS ────
+function showTab(id) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+// ──── SECTOR EXPAND ────
+function toggleSector(el) {
+  el.classList.toggle('expanded');
+}
+
+// ──── DONUT HIGHLIGHT ────
+function highlightSeg(idx) {
+  const ids = ['seg1','seg2','seg3'];
+  ids.forEach((id, i) => {
+    const el = document.getElementById(id);
+    el.style.opacity = (i === idx) ? '1' : '0.3';
+    el.style.filter = (i === idx) ? 'brightness(1.3)' : '';
+  });
+  setTimeout(() => {
+    ids.forEach(id => { document.getElementById(id).style.opacity = '1'; document.getElementById(id).style.filter = ''; });
+  }, 1500);
+}
+
+// ──── STAGGER SECTOR CARDS ────
+document.querySelectorAll('.sector-card, .tl-item, .pillar-card').forEach((el, i) => {
+  el.style.animationDelay = (i * 0.07) + 's';
+  observer.observe(el);
+});
+
+// ──── COUNTER ANIMATION ────
+function animateCounter(el, target, duration=2000) {
+  let start = 0; const step = target / (duration/16);
+  const timer = setInterval(() => {
+    start += step;
+    if (start >= target) { start = target; clearInterval(timer); }
+    el.textContent = Math.floor(start).toLocaleString('ne-NP');
+  }, 16);
+}
+
+// Initial stagger for stats
+document.querySelectorAll('.stat-card').forEach((c, i) => {
+  c.style.animationDelay = (i * 0.1) + 's';
+});
+</script>
+</body>
+</html>
